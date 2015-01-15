@@ -1,3 +1,12 @@
 [submodule "t/geoevent"]
 	path = t/geoevent
 	url = https://github.com/zbryikt/geoevent.git
+[submodule "p/yslin"]
+	path = p/yslin
+	url = https://github.com/zbryikt/yslin.git
+[submodule "p/vchief"]
+	path = p/vchief
+	url = https://github.com/zbryikt/vchief.git
+[submodule "p/6bulbs"]
+	path = p/6bulbs
+	url = https://github.com/zbryikt/6bulbs.git
