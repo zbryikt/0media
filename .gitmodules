@@ -1,0 +1,3 @@
+[submodule "t/geoevent"]
+	path = t/geoevent
+	url = git://github.com/zbryikt/geoevent.git
