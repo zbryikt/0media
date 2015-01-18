@@ -10,3 +10,6 @@
 [submodule "p/6bulbs"]
 	path = p/6bulbs
 	url = https://github.com/zbryikt/6bulbs.git
+[submodule "t/qa"]
+	path = t/qa
+	url = https://github.com/zbryikt/qa/
