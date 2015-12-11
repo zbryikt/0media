@@ -13,3 +13,7 @@
 [submodule "t/qa"]
 	path = t/qa
 	url = https://github.com/zbryikt/qa/
+[submodule "p/ergame"]
+	path = p/ergame
+	url = http://github.com/zbryikt/ergame/
+	branch = gh-pages
