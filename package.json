@@ -1,12 +1,12 @@
 {
   "author": "Kirby Wu",
-  "name": "template",
-  "description": "simple, quick template for bootstrap a page",
+  "name": "0media.tw",
+  "description": "0media.tw main website",
   "version": "0.0.1",
-  "homepage": "https://github.com/zbryikt/template",
+  "homepage": "https://github.com/zbryikt/0media",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zbryikt/template"
+    "url": "https://github.com/zbryikt/0media"
   },
   "engines": {
     "node": ">=0.8.18",
