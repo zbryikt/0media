@@ -15,5 +15,5 @@
 	url = https://github.com/zbryikt/qa/
 [submodule "p/ergame"]
 	path = p/ergame
-	url = http://github.com/zbryikt/ergame/
+	url = https://github.com/zbryikt/ergame/
 	branch = gh-pages
