@@ -1,18 +1,23 @@
 [submodule "t/geoevent"]
 	path = t/geoevent
 	url = https://github.com/zbryikt/geoevent.git
+	branch = gh-pages
 [submodule "p/yslin"]
 	path = p/yslin
 	url = https://github.com/zbryikt/yslin.git
+	branch = master
 [submodule "p/vchief"]
 	path = p/vchief
 	url = https://github.com/zbryikt/vchief.git
+	branch = gh-pages
 [submodule "p/6bulbs"]
 	path = p/6bulbs
 	url = https://github.com/zbryikt/6bulbs.git
+	branch = gh-pages
 [submodule "t/qa"]
 	path = t/qa
 	url = https://github.com/zbryikt/qa/
+	branch = gh-pages
 [submodule "p/ergame"]
 	path = p/ergame
 	url = https://github.com/zbryikt/ergame/
