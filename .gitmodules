@@ -2,3 +2,7 @@
 	path = web/static/p/ergame
 	url = https://github.com/zbryikt/ergame
 	branch = gh-pages
+[submodule "web/static/p/6bulbs"]
+	path = web/static/p/6bulbs
+	url = https://github.com/zbryikt/6bulbs.git
+	branch = gh-pages
