@@ -1,0 +1,46 @@
+@import vars
+@import basic
+
+=itembk($idx)
+  .item:nth-of-type(#{$idx})
+    background-position: -88px ($idx - 1) * -44px
+  .item:nth-of-type(#{$idx}).active
+    background-position: 0 ($idx - 1) * -44px
+  .item:nth-of-type(#{$idx}).active:hover
+    background-position: -44px ($idx - 1) * -44px
+#menu
+  width: 44px
+  height: 397px
+  top: 0
+  left: 0
+  position: fixed
+  background-repeat: no-repeat
+  z-index: index($order, menu)
+
+  .item
+    display: block
+    width: 44px
+    height: 44px
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-image: url(../img/menu-all.png)
+  .item.active
+    cursor: pointer
+  @include itembk(1)
+  @include itembk(2)
+  @include itembk(3)
+  @include itembk(4)
+  @include itembk(5)
+  @include itembk(6)
+  @include itembk(7)
+  @include itembk(8)
+  @include itembk(9)
+  @include itembk(10)
+
+@media (max-width: 480px)
+  #menu
+    height: 88px
+    overflow: hidden
+    @include transition(height 1s)
+    &.active
+      height: 440px
