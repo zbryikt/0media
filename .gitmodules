@@ -18,3 +18,7 @@
 	path = web/static/t/geoevent
 	url = https://github.com/zbryikt/geoevent.git
 	branch = gh-pages
+[submodule "web/static/t/qa"]
+	path = web/static/t/qa
+	url = https://github.com/zbryikt/qa.git
+	branch = gh-pages
