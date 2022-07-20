@@ -6,3 +6,7 @@
 	path = web/static/p/6bulbs
 	url = https://github.com/zbryikt/6bulbs.git
 	branch = gh-pages
+[submodule "web/static/p/vchief"]
+	path = web/static/p/vchief
+	url = https://github.com/zbryikt/vchief.git
+	branch = gh-pages
