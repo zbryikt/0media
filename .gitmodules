@@ -1,0 +1,4 @@
+[submodule "web/static/p/ergame"]
+	path = web/static/p/ergame
+	url = https://github.com/zbryikt/ergame
+	branch = gh-pages
