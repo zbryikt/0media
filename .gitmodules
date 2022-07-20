@@ -10,3 +10,7 @@
 	path = web/static/p/vchief
 	url = https://github.com/zbryikt/vchief.git
 	branch = gh-pages
+[submodule "web/static/p/yslin"]
+	path = web/static/p/yslin
+	url = https://github.com/zbryikt/yslin.git
+	branch = gh-pages
