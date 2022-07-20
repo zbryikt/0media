@@ -14,3 +14,7 @@
 	path = web/static/p/yslin
 	url = https://github.com/zbryikt/yslin.git
 	branch = gh-pages
+[submodule "web/static/t/geoevent"]
+	path = web/static/t/geoevent
+	url = https://github.com/zbryikt/geoevent.git
+	branch = gh-pages
