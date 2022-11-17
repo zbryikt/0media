@@ -1,0 +1,121 @@
+@import basic
+@import vars
+
+#fin
+  position: absolute
+  top: 0
+  left: 0
+  overflow: hidden
+  z-index: index($order, fin)
+  width: 100%
+  height: 100%
+  color: #000
+  opacity: 1
+  z-index: index($order, fin)
+  @include transition(all 0.5s ease-in-out)
+  &.inactive
+    left: -200px
+    opacity: 0
+    z-index: index($order, base)
+  #fin-ham-l, #fin-ham-r
+    position: absolute
+    top: 25%
+    width: 206px
+    height: 206px
+    margin-left: -103px
+    margin-top: -103px
+    background: url(img/hammer.png) center center no-repeat
+    background-size: contain
+    left: 35%
+    @include transform(rotate(45deg))
+  #fin-ham-r
+    left: 65%
+    @include transform(rotate(-45deg))
+  #fin-ham-m
+    position: absolute
+    top: 60px
+    left: 50%
+    width: 16%
+    height: 304px
+    margin-left: -8%
+    text-align: center
+    background: url(img/fin-fail.png) center top no-repeat
+    background-size: contain
+    font-size: 3em
+    line-height: 3em
+    z-index: 9999
+    &.pass
+      background-image: url(img/fin-pass.png)
+    @media (max-width: 1280px)
+      line-height: 2em
+      font-size: 2em
+    @media (max-width: 768px)
+      line-height: 1.5em
+      font-size: 1.5em
+  .fin-share
+    position: absolute
+    bottom: 20px
+    left: 50%
+    margin-left: 140px
+    z-index: index($order, fin-share)
+    background: #1C75BC
+    padding: 10px
+    border-radius: 50px
+    color: #fff
+    cursor: pointer
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3)
+    @include transition(all 0.5s ease-in-out)
+    &:hover
+      bottom: 25px
+      box-shadow: 0 6px 3px rgba(0,0,0,0.3)
+    .fb-share-button
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      @include transform(scaleY(3) translate(0,17px))
+      margin-left: 5px
+      opacity: 0
+  #fin-share2
+    margin-left: 200px
+  #fin-ret
+    position: absolute
+    bottom: 20px
+    width: 320px
+    left: 50%
+    margin-left: -160px
+    font-size: 1.4em
+    text-align: center
+    background: rgba(255,255,255,0.8)
+    box-shadow: 0 1px 1px 1px rgba(0,0,0,0.3)
+    padding: 10px
+    border-radius: 10px
+    color: #000
+  #fin-note
+    position: absolute
+    left: 20px
+    bottom: 20px
+    width: 20%
+    font-size: 12px
+    color: #999
+  #fin-btn
+    position: absolute
+    right: 20px
+    bottom: 20px
+    .btn
+      display: block
+      margin-bottom: 5px
+  @media (max-width: 991px)
+    #fin-share1
+      margin-left: 18%
+    #fin-share2
+      margin-left: 18%
+      @include transform(translate(60px,0))
+    #fin-note, #fin-btn .btn
+      font-size: 9px
+    #fin-ret
+      font-size: 12px
+    #fin-ret
+      width: 40%
+      margin-left: -20%

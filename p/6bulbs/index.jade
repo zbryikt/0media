@@ -1,0 +1,191 @@
+doctype html
+//- basic libraries: jquery(1.10.2), d3js(3.3.11), angularjs(1.2.3), bootstrap(3.0)/semantic-ui(0.9.3/0.9.5)
+- var usecdn = false
+- var useog = true
+- var lib = { jquery: true, d3js: false, angular: true, bootstrap: true, semantic: false }
+- var assets = "assets"
+- var thumbnail = "http://0media.tw/6bulbs/img/thumbnail.png"
+html(lang="en")
+  head(prefix="og: http://ogp.me/ns#")
+    meta(charset="utf-8")
+    title 五都市長連任秀 - 政見評審團你來當 / 新聞 e 論壇
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    link(rel="icon",type="image/x-icon",href="img/favicon.png")
+    // libraries
+    include library.jade
+    // custom files
+    link(rel="stylesheet",type="text/css",href="index.css")
+    script(type="text/javascript",src="index.js")
+  body(ng-app="main",ng-controller="main")
+    #cache
+      img(src="img/heads.png")
+      img(src="img/land-bk.png")
+      img(src="img/choose.png")
+      img(src="img/hands.png")
+      img(src="img/hammer.png")
+      img(src="img/fin-fail.png")
+      img(src="img/fin-pass.png")
+      img(src="img/land-bk.png")
+      img(src="img/landscape.png")
+      img(src="img/court-bk.png")
+      img(src="img/court-fg.png")
+      img(src="img/heads.png")
+      img(src="img/bulb0.png")
+      img(src="img/bulb1.png")
+      img(src="img/bulb2.png")
+      img(src="img/jg-sentl.png")
+      img(src="img/jg-sentl-active.png")
+      img(src="img/jg-sentr.png")
+      img(src="img/jg-sentr-active.png")
+      img(src="img/more.png")
+      img(src="img/land-bk.png")
+      img(src="img/brand.png")
+      img(src="img/0media.png")
+      img(src="img/go.png")
+      img(src="img/go-active.png")
+
+    #hint(ng-class="{'active':hint}"): #hint-inner
+    #content(ng-show="!hint")
+      #land(ng-class="{'inactive':stage!='land'}")
+        img#ld-h(src="img/land-main.png")
+        #ld-credit
+          | 網頁工程 &#187; 吳泰輝
+          br
+          | 網頁設計 &#187; 吳政達
+          br
+          br
+          | 專案企劃 &#187;
+          br
+          | 　邱彥瑜、梁德珊
+          br
+          | 　蔣宜婷、陳貞樺
+          br
+          br
+          | 資料整理編輯團隊 &#187;
+          br
+          | 　彭筱婷、蔣　金
+          br
+          | 　蔣宜婷、吳宗泰
+          br
+          | 　蘇曉凡、梁德珊
+          br
+          | 　邱彥瑜、周敬恩
+          br
+          | 　沈庭安、鄭閔文
+          br
+          | 　陳貞樺、李映昕
+          br
+          | 　呂伊萱、陳芛薇
+          br
+          | 　陳伯璿、毛怡玫
+          br
+          | 　王惠慧、謝宗穎
+        #ld-brand
+        #ld-0media
+        #ld-tt
+          | 看膩口水戰、聽膩抹黑攻擊了嗎? 現在就來一場你可以自己評分的政見六燈獎吧!
+          | 今年除了台北市外，其他直轄市都是挑戰者對上衛冕者的踢館大戰，五位背負期待追求連任的市長們，應該受到更多檢視！現在我們就要將他們送上政策檢驗舞台，讓身為青年的你，親自按下他們這4年政見落實的及格按鈕！
+          //-
+            | 你看膩口水戰了嗎？聽膩抹黑造假的攻擊了嗎？現在就來一場你可以自己評分的政見六燈獎吧！
+            | 今年除了台北市外，其他直轄市都是挑戰者對上衛冕者的踢館大戰，帶著上一次選民期待追求連任的市長們，應該受到更多檢視！現在我們就要把五位衛冕者送上政策檢驗舞台，讓身為青年的你，親自按下他們這四年政見落實的及格按鈕！
+            | 評審請給燈燈燈燈燈燈～
+        #ld-b(ng-click="stage='choose'")
+      #cs-menu
+        img#logo(src="img/logo-sm.png",ng-click="stage='land'")
+        .item(ng-class="{'active':rlt.c==5}",ng-click="rechoose(5)")
+          .county 新北市
+          .name 朱立倫
+        .item(ng-class="{'active':rlt.c==4}",ng-click="rechoose(4)")
+          .county 桃園縣
+          .name 吳志揚
+        .item(ng-class="{'active':rlt.c==3}",ng-click="rechoose(3)")
+          .county 台中市
+          .name 胡志強
+        .item(ng-class="{'active':rlt.c==2}",ng-click="rechoose(2)")
+          .county 台南市
+          .name 賴清德
+        .item(ng-class="{'active':rlt.c==1}",ng-click="rechoose(1)")
+          .county 高雄市
+          .name 陳菊
+      #choose(ng-class="{'inactive':stage!='choose'}")
+        | &nbsp;
+        #cs-box(ng-click="start()")
+          #cs-box-inner(ng-class="rlt.b")
+        #cs-rlt
+          .head(ng-class="rlt.h[1]",ng-click="rlt.c=5")
+          .head(ng-class="rlt.h[2]",ng-click="rlt.c=4")
+          .head(ng-class="rlt.h[3]",ng-click="rlt.c=3")
+          .head(ng-class="rlt.h[4]",ng-click="rlt.c=2")
+          .head(ng-class="rlt.h[5]",ng-click="rlt.c=1")
+        #cs-btn
+          #cs-gl(ng-click="choosehead(1)")
+          #cs-gt 選擇一個首長
+          #cs-gr(ng-click="choosehead(-1)")
+      #judge(ng-show="stage=='judge' || stage=='fin'")
+        #court(ng-class="{'fin':stage=='fin'}")
+          .inner
+            #jc-h
+            #bulb1.bulb(ng-class="bulbcls(0)"): .inner {{ctx.cat}}
+            #bulb2.bulb(ng-class="bulbcls(1)"): .inner {{ctx.cat}}
+            #bulb3.bulb(ng-class="bulbcls(2)"): .inner {{ctx.cat}}
+            #bulb4.bulb(ng-class="bulbcls(3)"): .inner {{ctx.cat}}
+            #bulb5.bulb(ng-class="bulbcls(4)"): .inner {{ctx.cat}}
+            #bulb6.bulb(ng-class="bulbcls(5)"): .inner {{ctx.cat}}
+
+        #jg-sent1.sent(ng-class="{'fin':stage=='fin'}")
+          #js1-title.title 
+            span(ng-if="jdg.cc==4") 2009年他曾經這麼說
+            span(ng-if="jdg.cc!=4") 2010年他曾經這麼說
+          #js1-desc.desc
+            | {{ ctx.view }}
+        #jg-sent2.sent(ng-class="{'inactive':knowmore,'fin':stage=='fin'}")
+          #js2-title.title 2014年他實際做到的
+          #js2-desc.desc
+            | {{ ctx.achieve}}
+        #jg-sent3.sent(ng-class="{'inactive':!knowmore,'fin':stage=='fin'}")
+          #js3-title.title 但你不能不知道
+          #js3-desc.desc
+            | {{ ctx.more }}
+        #jg-sentl(ng-click="scoring(2)",ng-class="{'fin':stage=='fin'}")
+        #jg-sentr(ng-click="scoring(0)",ng-class="{'fin':stage=='fin'}")
+        #jg-more(ng-class="{'shown':knowmore,'fin':stage=='fin'}",ng-click="knowmore=!!!knowmore")
+      #fin(ng-class="{'inactive':stage!='fin'}")
+        #fin-ham-l
+        #fin-ham-m(ng-class="{'pass':jdg.count()>=3}")
+        #fin-ham-r
+        #fin-note
+          | 此新聞專題企圖以青年視角整理並檢測追求連任者政見，因此在觀點選擇以及時間限制上，所列並非完整政見，若有任何建議請來信寄至
+          a(href="mailto:newseforum@gmail.com") 新聞 E 論壇
+          |  。
+        #fin-share1.fin-share
+          | 分享給
+          br
+          | 朋友吧
+          .fb-share-button(data-href="http://0media.tw/6bulbs",data-layout="button")
+        #fin-share2.fin-share(ng-click="rechoose(-1)")
+          | 換縣市
+          br
+          | 再來玩
+        #fin-ret
+          | 我給 {{cm[5 - jdg.cc]}} 的市政六燈獎結果是
+          br
+          | 亮 {{jdg.count()}} 燈！ 
+          span(ng-if="jdg.count()>=5") 不就好棒棒！
+          span(ng-if="jdg.count()<5 && jdg.count()>=3") 普普通通啦～
+          span(ng-if="jdg.count()<3") 太爛啦割掉！
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-52410923-1', 'auto');
+      ga('send', 'pageview');
+    #fb-root
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=646775858745770&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));

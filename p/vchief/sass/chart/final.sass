@@ -1,0 +1,45 @@
+#final-chart
+  .you-choice, .all-choice
+    width: 11%
+
+#final-chart .bar
+  width: 11%
+
+#final-chart .labels
+  .label
+    width: 11%
+  .label:nth-of-type(1)
+    left: 0%
+  .label:nth-of-type(2)
+    left: 38%
+  .label:nth-of-type(3)
+    right: 0
+
+#final-chart .you-value
+  left: 30%
+  color: #f00
+  background: #f00
+#final-chart .you-value:before
+  content: "你在這裏"
+
+#final-chart .all-value
+  top: auto
+  bottom: 0
+  height: 70%
+
+#final-chart .all-value:before
+  content: "平均"
+  top: -26px
+
+#final-chart.barchart
+  .bar
+    background: #00aabc
+    border: 1px solid #000
+    box-shadow: 0 1px 2px rgba(0,0,0,0.5)
+
+.para.answer.final
+  margin-left: 0
+  margin-right: 0
+  width: 100%
+  p.answer
+    text-align: left
